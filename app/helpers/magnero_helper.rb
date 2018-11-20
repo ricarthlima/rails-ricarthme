@@ -1,0 +1,2 @@
+module MagneroHelper
+end

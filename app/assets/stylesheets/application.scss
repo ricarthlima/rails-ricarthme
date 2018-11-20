@@ -13,3 +13,26 @@
  */
 
 @import 'bootstrap';
+
+div.titulo{
+    padding: 5%;
+    background-color: #F0F0F0;
+}
+
+div.secao{
+    padding: 3%;
+    background-color: #292929;
+    color: #FFFFFF;
+}
+
+div.texto{
+    padding: 3%;
+}
+
+div.footer{
+    margin-top: 3%;
+    padding: 3%;
+    background-color: #26053F;
+    color: #FFFFFF;
+    font-size: small;
+}
