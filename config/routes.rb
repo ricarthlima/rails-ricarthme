@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root "welcome#index"
   get "magnero" => "magnero#index"
   get "justa" => "justa#index"
+  get "live" => "live#index"
 end

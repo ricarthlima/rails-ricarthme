@@ -19,6 +19,24 @@ div.titulo{
     background-color: #F0F0F0;
 }
 
+div.titulo-imagem{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 9%;
+    min-height: 300px;
+    
+    color: #FFFFFF;
+    
+    background-image: url('ricarth-fundo-roxo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 90%;
+}
+
+img.imagem-foto{
+    max-height: 150px;
+}
+
 div.secao{
     padding: 3%;
     background-color: #292929;
