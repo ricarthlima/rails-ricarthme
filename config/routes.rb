@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "live" => "live#index"
   
   # Rotas /c/ para currículos
+  get "c" => "welcome#index"
   get "/c/magnero" => "magnero#index"
   get "/c/justa" => "justa#index"
   get "/c/live" => "live#index"
