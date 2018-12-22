@@ -1,4 +1,7 @@
-<%= render "shared/navbar" %>
+<%= content_for :nav do%>
+  <%= render "shared/navbar" %>
+<% end %>
+
 <%= render "shared/cabecalho" %>
 <%= render "shared/info_basica_foto" %>
 
