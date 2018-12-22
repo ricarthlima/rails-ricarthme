@@ -1,0 +1,23 @@
+<div class = "secao" id = "info">
+    <h2>O que é o mínimo que você precisa saber?</h2>
+</div>
+
+<div class = "container my-4 padding-lados">
+    <div class = "row">
+        <div class = "col-md-auto">
+            <%= image_tag "/assets/ricarth-foto-redonda.png", class: "imagem-foto"%>
+        </div>
+        <div class = "col">
+            <h3><strong>Ricarth Ruan da Silva Lima</strong></h3>
+            <ul class="list-group list-group-flush">
+                <li class = "list-group-item"><strong>Sistemas de Informação - CIn (UFPE)</strong> - 5º Período<br/></li>
+                <li class = "list-group-item"><strong>Pernambuco</strong><br/></li>
+                <li class = "list-group-item"><strong>E-mail:</strong> <a href = "mailto:rrsl@cin.ufpe.br">rrsl@cin.ufpe.br</a><br/></li>
+                <% if @sensivel == true %>
+                    <%= render "shared/info_basica_sensivel" %>
+                <% end %>
+            </ul>
+        </div>
+    </div>
+</div>
+ 

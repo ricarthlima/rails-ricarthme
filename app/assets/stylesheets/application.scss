@@ -14,6 +14,32 @@
 
 @import 'bootstrap';
 
+body{
+    background-color: #f4eafa;
+}
+
+.no-padding{
+    padding: 0px;
+}
+
+.padding-lados{
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.nav-color{
+    background-color: #26053F;
+    color: #FFFFFF;
+}
+
+.nav-text-color{
+    color: #FFFFFF;
+}
+
+.bg-branco{
+    background-color: #FFFFFF;
+}
+
 div.titulo{
     padding: 5%;
     background-color: #F0F0F0;
@@ -48,8 +74,7 @@ div.texto{
 }
 
 div.footer{
-    margin-top: 3%;
-    padding: 3%;
+    padding: 1%;
     background-color: #26053F;
     color: #FFFFFF;
     font-size: small;
