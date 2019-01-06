@@ -4,6 +4,11 @@
 
 <%= render "shared/cabecalho" %>
 <%= render "shared/info_basica_foto" %>
+
+<% if @empresa != nil %>
+<%= render @empresa.to_s %>
+<% end %>
+
 <%= render "shared/bom" %>
 <%= render "shared/historico_profissional" %>
 <%= render "shared/formacao_academica" %>

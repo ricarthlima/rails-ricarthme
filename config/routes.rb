@@ -4,8 +4,6 @@ Rails.application.routes.draw do
 
   # Rotas /c/ para currículos
   get "c" => "profissional#index"
-  get "/c/magnero" => "profissional#magnero"
-  get "/c/justa" => "profissional#justa"
-  get "/c/live" => "profissional#live"
-  get "/c/serttel" => "profissional#serttel"
+  get "c/:empresa" => "profissional#index"
+
 end
