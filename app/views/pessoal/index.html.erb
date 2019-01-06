@@ -1,0 +1,73 @@
+<%= content_for :nav do%>
+  <%= render "navbar" %>
+<% end %>
+
+<%= render 'cabecalho' %>
+
+<div class = "p-secao" id = "sobre">
+    <h3>Sobre mim</h3>
+</div>
+
+<div class = "container my-4 padding-lados">
+    <div class = "row">
+        <div class = "col-md-auto my-2">
+            <center><%= image_tag "/assets/ricarth-foto-redonda.png", class: "imagem-foto"%></center>
+        </div>
+        <div class = "col my-2">
+            <h3><strong>Ricarth Ruan da Silva Lima</strong></h3>
+            <ul class="list-group list-group-flush">
+                <li class = "list-group-item"><strong>Sistemas de Informação - CIn (UFPE)</strong> - 5º Período<br/></li>
+                <li class = "list-group-item"><strong>Pernambuco</strong><br/></li>
+                <li class = "list-group-item"><strong>E-mail:</strong> <a href = "mailto:rrsl@cin.ufpe.br">rrsl@cin.ufpe.br</a><br/></li>
+                <% if @sensivel == true %>
+                    <%= render "shared/info_basica_sensivel" %>
+                <% end %>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class = "p-texto">
+    Olá! Sou estudante de <strong>Sistemas de Informação</strong> no Centro de Informática da Universidade Federal de Pernambuco (CIn-UFPE). Desde muito jovem me interesso
+    por computadores e coisas que podemos fazer com eles. Fiz "cursos profissionalizantes" na área ainda na minha infância que, apesar de hoje serem conhecimentos ultrapassados,
+    serviram como minha inspiração para seguir os caminhos que trilhei.</p>
+    
+    Fui estudante do Colégio de Aplicação e foi nessa época que comecei a fazer mover minha vontade de criar coisas, resolver problemas e melhorar a vida das pessoas. Eu acredito
+    que esses ímpetos podem ser alcançados de várias formas, mas a minha foi através da programação. Foi no Aplicação que eu tive meu primeiro grande trabalho como desenvolvedor,
+    o <strong>LactoRun</strong> uma ferramenta de auxilio à atletas. Nessa época eu era muito jovem na programação e na vida, e isso claramente se refletia no produto desenvolvido,
+    porém mesmo assim a equipe LactoRun conquistou vários prêmios, certificações e participações em congressos, algo que eu tenho muito orgulho e sempre vou ser grato.</p>
+    
+    No período de 2014 à 2016 cursei <strong>Ciência da Computação</strong> no mesmo centro onde hoje curso Sistemas. No começo de 2016 vi que a melhor opção para minha vida
+    seria abadonar o curso, tanto por questões pessoais, tanto por não me identificar com o carater claramente científico que CC têm. Eu tinha uma visão muito clara em mente
+    de que queria resolver os problemas das pessoas lá fora, com a simplicidade e rapidez que o mundo dos negócios em tecnologia hoje demandam. <strong>Essa se mostrou uma 
+    decisão muito acertada, já que hoje me identifico muito com Sistemas de Informação.</strong></p>
+    
+    Foi no cursando SI que eu descobri outra paixão: gerar conteúdo educativo e ensinar. Fui monitor de <strong>Programação 1</strong> por 3 períodos, de <strong>Algoritmos e 
+    Estrutura de Dados</strong> por 2 períodos, e de <strong>Redes de Computadores</strong> por 1 período. Ainda estou me descobrindo no sentido de se vou trilhar minha vida no
+    rumo do Empreendedorismo ou da Educação, ou de ambos. Mas no caso mais simples, sempre tentarei ajudar. Você pode conferir meus conteúdos de programação no 
+    <a href = "tinyurl.com/secretplaces2">Secret Places</a> e no meu canal no <a href = "https://www.youtube.com/channel/UCFxy994CuYWRG0HOLBq0gyQ">YouTube</a></p>
+    
+    Hoje sou, além de estudante, desenvolvedor no <a href = "http://lactorun.com.br/">LactoRun</a>, estagiário na <a href = "http://www.serttel.com.br/">Serttel</a>, monitor de 
+    <a href = "https://sites.google.com/site/gpnif978/home">Gestão de Processos de Negócio</a>, fundador e desenvolvedor do <a href = "https://evegano.herokuapp.com">É vegano?</a>,
+    fundador e desenvolvedor do aplicativo Little Thinkers e desenvolvedor para a equipe do Privacy Criteria.
+</div>
+
+<div class = "p-secao" id = "sobre">
+    <h3>Áreas de Interesse</h3>
+</div>
+
+<div class = "p-texto">
+    <center><img src = "/assets/areas-interesse.png" class = "img-fluid imagem-perdida"></center>
+    <h5 class = "my-2">Em programação</h5>
+    <p>Python, Android, Rails, Java, Bootstrap, HTML, CSS, JS, Web Apps...</p>
+    
+    <h5>Em empreendedorismo</h5>
+    <p>Lean Startup, Metodologias Ágeis, Gestão de Pessoas, Estudo e Resolução de Problemas, Entrega de Valor...</p>
+    
+    <h5>Em design</h5>
+    <p>Experiência do Usuário, Interface do Usuário, Photshop, Premiere, Marketing...</p>
+</div>
+
+<%= content_for :footer do%>
+    <%= render "footer" %>
+<% end %>

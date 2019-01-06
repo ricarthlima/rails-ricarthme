@@ -1,15 +1,19 @@
 <%= content_for :nav do%>
-  <%= render "shared/navbar" %>
+  <%= render "navbar" %>
 <% end %>
 
-<%= render "shared/cabecalho" %>
-<%= render "shared/info_basica_foto" %>
+<%= render "cabecalho" %>
+<%= render "info_basica_foto" %>
 
 <% if @empresa != nil %>
-<%= render @empresa.to_s %>
+    <%= render "profissional/empresas/"+@empresa %>
 <% end %>
 
-<%= render "shared/bom" %>
-<%= render "shared/historico_profissional" %>
-<%= render "shared/formacao_academica" %>
-<%= render "shared/idiomas" %>
+<%= render "bom" %>
+<%= render "historico_profissional" %>
+<%= render "formacao_academica" %>
+<%= render "idiomas" %>
+
+<%= content_for :footer do%>
+    <%= render "footer" %>
+<% end %>
