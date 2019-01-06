@@ -7,8 +7,10 @@ Rails.application.routes.draw do
   get "livros" => "pessoal#personal_books"
   get "desafios" => "pessoal#desafios"
 
-  # Rotas /c/ para currículos
+  # Rotas /p/ para currículos
   get "profissional" => "profissional#index"
+  get "p" => "profissional#index"
   get "profissional/:empresa" => "profissional#index"
+  get "p/:empresa" => "profissional#index"
 
 end
