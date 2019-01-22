@@ -1,2 +1,0 @@
-class MagneroController < ApplicationController
-end

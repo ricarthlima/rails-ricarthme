@@ -1,0 +1,19 @@
+<%= content_for :nav do%>
+  <%= render "navbar" %>
+<% end %>
+
+<%= render "cabecalho" %>
+<%= render "info_basica_foto" %>
+
+<% if @empresa != nil %>
+    <%= render "profissional/empresas/"+@empresa %>
+<% end %>
+
+<%= render "bom" %>
+<%= render "historico_profissional" %>
+<%= render "formacao_academica" %>
+<%= render "idiomas" %>
+
+<%= content_for :footer do%>
+    <%= render "footer" %>
+<% end %>
