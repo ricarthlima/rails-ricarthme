@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class MagneroControllerTest < ActionDispatch::IntegrationTest
+class ProfissionalControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
