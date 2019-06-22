@@ -154,10 +154,17 @@ div.justificado{
 
 .item-carrosel{
     background: #18280b; 
-    height: 600px; 
-    padding-top: 30px;
+    height: auto; 
+    padding-top: 20px;
 }
 
 .img-carrosel{
     max-height: 500px;
+}
+
+.caption-carrosel{
+    background: #00000026; 
+    margin-top: 20px;
+    padding-bottom: 40px;
+    position: static;
 }

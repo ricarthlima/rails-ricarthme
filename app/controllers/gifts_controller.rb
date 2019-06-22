@@ -5,26 +5,31 @@ class GiftsController < ApplicationController
   # GET /gifts
   # GET /gifts.json
   def index
+    authorize! :manage, :all
     @gifts = Gift.all
   end
 
   # GET /gifts/1
   # GET /gifts/1.json
   def show
+    authorize! :manage, :all
   end
 
   # GET /gifts/new
   def new
+    authorize! :manage, :all
     @gift = Gift.new
   end
 
   # GET /gifts/1/edit
   def edit
+    authorize! :manage, :all
   end
 
   # POST /gifts
   # POST /gifts.json
   def create
+    authorize! :manage, :all
     @gift = Gift.new(gift_params)
 
     respond_to do |format|
@@ -41,6 +46,7 @@ class GiftsController < ApplicationController
   # PATCH/PUT /gifts/1
   # PATCH/PUT /gifts/1.json
   def update
+    authorize! :manage, :all
     respond_to do |format|
       if @gift.update(gift_params)
         format.html { redirect_to @gift, notice: 'Gift was successfully updated.' }
@@ -55,6 +61,7 @@ class GiftsController < ApplicationController
   # DELETE /gifts/1
   # DELETE /gifts/1.json
   def destroy
+    authorize! :manage, :all
     @gift.destroy
     respond_to do |format|
       format.html { redirect_to gifts_url, notice: 'Gift was successfully destroyed.' }

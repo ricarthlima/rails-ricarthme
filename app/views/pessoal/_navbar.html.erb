@@ -48,7 +48,7 @@
               <i class="fas fa-cog"></i>
             </button>
             <div class="mt-sm dropdown-menu dropdown-menu-right nav-p-color text-light" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item text-light" href=<%=gifts_path%>>Gifts</a>
+              <% if can? :manage, Gift %><a class="dropdown-item text-light" href=<%=gifts_path%>>Gifts</a><%end%>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item text-light" href=<%=edit_user_registration_path%>>Editar Perfil</a>
               <a class="dropdown-item text-light" data-method="delete" href=<%=destroy_user_session_path%>>Sair</a>
