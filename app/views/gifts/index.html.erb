@@ -1,0 +1,41 @@
+<%= content_for :nav do%>
+  <%= render "pessoal/navbar" %>
+<% end %>
+
+<h1>Gerenciador de Presentes</h1>
+
+<table class = "table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Wishlevel</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th>Url image</th>
+      <th>Url prod</th>
+      <th>Active</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gifts.each do |gift| %>
+      <tr>
+        <td><%= gift.name %></td>
+        <td><%= gift.wishlevel %></td>
+        <td><%= gift.price %></td>
+        <td><%= gift.description %></td>
+        <td><%= gift.url_image %></td>
+        <td><%= gift.url_prod %></td>
+        <td><%= gift.active %></td>
+        <td><%= link_to 'Show', gift %></td>
+        <td><%= link_to 'Edit', edit_gift_path(gift) %></td>
+        <td><%= link_to 'Destroy', gift, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gift', new_gift_path %>
