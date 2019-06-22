@@ -19,6 +19,10 @@ body{
     background-color: #f4f4f4;
 }
 
+.mt-sm{
+    margin-top: 5px;
+}
+
 .no-padding{
     padding: 0px;
 }
@@ -142,4 +146,25 @@ div.justificado{
 
 .imagem-perdida{
     max-width: 70%;
+}
+
+.text-light{
+    color: #A9D0C6;
+}
+
+.item-carrosel{
+    background: #18280b; 
+    height: auto; 
+    padding-top: 20px;
+}
+
+.img-carrosel{
+    max-height: 500px;
+}
+
+.caption-carrosel{
+    background: #00000026; 
+    margin-top: 20px;
+    padding-bottom: 40px;
+    position: static;
 }

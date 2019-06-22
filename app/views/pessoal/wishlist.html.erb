@@ -1,0 +1,91 @@
+<%= content_for :nav do%>
+  <%= render "pessoal/navbar" %>
+<% end %>
+
+<img src = "/assets/gifts.jpg" class = "img-fluid">
+
+<div class = "p-texto">
+    <h1>Lista de Presentes</h1>
+    
+    <p>
+      Quem me conhece sabe que eu prefiro ser surpreendido. Porém, se você está totalmente perdido
+      em relação aos meus gostos, esse pode ser um bom ponto de partida. Além disso ter uma wishlist
+      é importante para manter o foco nas coisas que eu mesmo quero comprar.
+    </p>
+    
+    <br/>
+    
+    <small>
+        <strong>Nível de desejo:</strong>
+        <img height = "15" src = <%= "/assets/loves/love0.png"%>>
+        <%= wishlevel(0) %>
+        |
+        <img height = "15" src = <%= "/assets/loves/love1.png"%>>
+        <%= wishlevel(1) %>
+        |
+        <img height = "15" src = <%= "/assets/loves/love2.png"%>>
+        <%= wishlevel(2) %>
+        |
+        <img height = "15" src = <%= "/assets/loves/love3.png"%>>
+        <%= wishlevel(3) %>
+        |
+        <img height = "15" src = <%= "/assets/loves/love4.png"%>>
+        <%= wishlevel(4) %>
+        |
+        <img height = "15" src = <%= "/assets/loves/love5.png"%>>
+        <%= wishlevel(5) %>
+    </small>
+    <div id="carouselExampleIndicators" class="carousel slide mt-sm" data-ride="carousel" data-interval="7000">
+      <ol class="carousel-indicators">
+          <% for i in 0..(@gifts.length-1) %>
+              <li data-target="#carouselExampleIndicators" data-slide-to=<%=i%> class="active"></li>
+          <% end %>
+      </ol>
+      <div class="carousel-inner">
+        <% @gifts.each do |gift| %>
+            <% if @primeiro == false %>
+                <div class="carousel-item active item-carrosel">
+                <% @primeiro = true %>
+            <% else %>
+                <div class="carousel-item item-carrosel">
+            <% end %>
+              <center>
+                  <img class="image-fluid img-carrosel" src=<%= gift.url_image %> alt=<%= gift.name %>>
+                  <div class="carousel-caption caption-carrosel">
+                      <h5><%= gift.name %></h5>
+                      <p><%= gift.description %></p>
+                      <hr style = "border-color: #FFFFFF66; width: 20%;">
+                      <p>
+                          <img height = "25" src = <%= "/assets/loves/love" + gift.wishlevel.to_s + ".png"%>>
+                          <%= wishlevel(gift.wishlevel) %>
+                      </p>
+                      <p>
+                          <a class = "btn btn-success" target = "_blank" href = <%=gift.url_prod%>><i class="fas fa-shopping-cart"></i>    <%=number_to_currency(gift.price, unit: "R$", separator: ",", delimiter: "")%></a>
+                      </p>
+                  </div>
+              </center>
+            </div>
+        <% end %>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Próximo</span>
+      </a>
+    </div>
+    
+    <p>
+      <br/>
+      <strong>Aviso para você e para mim:</strong><br/>
+      Nunca compre nada que você não pode pagar.
+    </p>
+    </div>
+</div>
+
+
+<%= content_for :footer do%>
+    <%= render "footer" %>
+<% end %>
