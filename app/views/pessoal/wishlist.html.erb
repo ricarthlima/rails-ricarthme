@@ -85,38 +85,34 @@
     </p>
     
     <hr>
-      <div class = "container">
+    <div class = "row align-items-center">
       <% loop do %>
-        <div class = "row">
-          <% loop do %>
-            <div class = "col-4" style = "width: 150px;">
-              <center>
-                <% gift = @gifts[@i] %>
-                <div style = "height: 250px;">
-                  <img class="img-fluid img-grid" src=<%= gift.url_image %> alt=<%= gift.name %>>
-                </div>
-                <h6><%= gift.name %></h6>
-                <small><%= gift.description %></small>
-                <hr style = "width: 60%;">
-                <small>
-                    <img height = "20" src = <%= "/assets/loves/love" + gift.wishlevel.to_s + ".png"%>>
-                    <%= wishlevel(gift.wishlevel) %>
-                </small>
-                <p>
-                    <a class = "btn btn-success" target = "_blank" href = <%=gift.url_prod%>><i class="fas fa-shopping-cart"></i>    <%=number_to_currency(gift.price, unit: "R$", separator: ",", delimiter: "")%></a>
-                </p>
-              </center>
+        <div class = "col align-self-center grid-col">
+          <center>
+            <% gift = @gifts[@i] %>
+            <div class = "grid-img-area">
+              <img class="img-fluid grid-img" src=<%= gift.url_image %> alt=<%= gift.name %>>
             </div>
-            <% @i = @i + 1 %>
-            <% break if (@i >= @l) %> 
-          <% end %>
-          <% @l = @l + min(5, @gifts.length-@l) %>
+            <img height = "20" src = <%= "/assets/loves/love" + gift.wishlevel.to_s + ".png"%>>
+                <%= wishlevel(gift.wishlevel) %>
+            </small>
+            <div class = "grid-text-area">
+              <h6><%= gift.name %></h6>
+              <small><%= gift.description %></small>
+            </div>
+            <p>
+              <a class = "btn btn-success btn-sm" target = "_blank" href = <%=gift.url_prod%>><i class="fas fa-shopping-cart"></i>    <%=number_to_currency(gift.price, unit: "R$", separator: ",", delimiter: "")%></a>
+            </p>
+            <small>
+          </center>
         </div>
-        <% break if (@l >= @gifts.length) %>
+        <% @i = @i + 1 %>
+        <% break if (@i >= @gifts.length) %> 
       <% end %>
     </div>
     
-    </div>
+  </div>
+  
     
 </div>
 

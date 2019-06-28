@@ -163,9 +163,28 @@ div.justificado{
     max-width: 90vw;
 }
 
-.img-grid{
+.grid-img{
     max-height: 250px;
     max-width: auto;
+}
+
+.grid-img-area{
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-col{
+    min-width: 250px; 
+    max-width: 250px; 
+    margin-top: 15px;
+}
+
+.grid-text-area{
+    height: 100px; 
+    margin-top: 10px; 
+    overflow-y:auto;
 }
 
 .caption-carrosel{
