@@ -35,14 +35,15 @@
         <img height = "15" src = <%= "/assets/loves/love5.png"%>>
         <%= wishlevel(5) %>
     </small>
+    
     <div id="carouselExampleIndicators" class="carousel slide mt-sm" data-ride="carousel" data-interval="7000">
       <ol class="carousel-indicators">
-          <% for i in 0..(@gifts.length-1) %>
+          <% for i in 0..(@gifts.slice(0,10).length-1) %>
               <li data-target="#carouselExampleIndicators" data-slide-to=<%=i%> class="active"></li>
           <% end %>
       </ol>
       <div class="carousel-inner">
-        <% @gifts.each do |gift| %>
+        <% @gifts.slice(0,10).each do |gift| %>
             <% if @primeiro == false %>
                 <div class="carousel-item active item-carrosel">
                 <% @primeiro = true %>
@@ -82,7 +83,41 @@
       <strong>Aviso para você e para mim:</strong><br/>
       Nunca compre nada que você não pode pagar.
     </p>
+    
+    <hr>
+      <div class = "container">
+      <% loop do %>
+        <div class = "row">
+          <% loop do %>
+            <div class = "col-4" style = "width: 150px;">
+              <center>
+                <% gift = @gifts[@i] %>
+                <div style = "height: 250px;">
+                  <img class="img-fluid img-grid" src=<%= gift.url_image %> alt=<%= gift.name %>>
+                </div>
+                <h6><%= gift.name %></h6>
+                <small><%= gift.description %></small>
+                <hr style = "width: 60%;">
+                <small>
+                    <img height = "20" src = <%= "/assets/loves/love" + gift.wishlevel.to_s + ".png"%>>
+                    <%= wishlevel(gift.wishlevel) %>
+                </small>
+                <p>
+                    <a class = "btn btn-success" target = "_blank" href = <%=gift.url_prod%>><i class="fas fa-shopping-cart"></i>    <%=number_to_currency(gift.price, unit: "R$", separator: ",", delimiter: "")%></a>
+                </p>
+              </center>
+            </div>
+            <% @i = @i + 1 %>
+            <% break if (@i >= @l) %> 
+          <% end %>
+          <% @l = @l + min(5, @gifts.length-@l) %>
+        </div>
+        <% break if (@l >= @gifts.length) %>
+      <% end %>
     </div>
+    
+    </div>
+    
 </div>
 
 
