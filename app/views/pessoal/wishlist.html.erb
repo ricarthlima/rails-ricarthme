@@ -35,14 +35,15 @@
         <img height = "15" src = <%= "/assets/loves/love5.png"%>>
         <%= wishlevel(5) %>
     </small>
+    
     <div id="carouselExampleIndicators" class="carousel slide mt-sm" data-ride="carousel" data-interval="7000">
       <ol class="carousel-indicators">
-          <% for i in 0..(@gifts.length-1) %>
+          <% for i in 0..(@gifts.slice(0,10).length-1) %>
               <li data-target="#carouselExampleIndicators" data-slide-to=<%=i%> class="active"></li>
           <% end %>
       </ol>
       <div class="carousel-inner">
-        <% @gifts.each do |gift| %>
+        <% @gifts.slice(0,10).each do |gift| %>
             <% if @primeiro == false %>
                 <div class="carousel-item active item-carrosel">
                 <% @primeiro = true %>
@@ -82,7 +83,37 @@
       <strong>Aviso para você e para mim:</strong><br/>
       Nunca compre nada que você não pode pagar.
     </p>
+    
+    <hr>
+    <div class = "row align-items-center justify-content-center justify-content-md-around">
+      <% loop do %>
+        <div class = "col align-self-center grid-col">
+          <center>
+            <% gift = @gifts[@i] %>
+            <div class = "grid-img-area">
+              <img class="img-fluid grid-img" src=<%= gift.url_image %> alt=<%= gift.name %>>
+            </div>
+            <img height = "20" src = <%= "/assets/loves/love" + gift.wishlevel.to_s + ".png"%>>
+                <%= wishlevel(gift.wishlevel) %>
+            </small>
+            <div class = "grid-text-area">
+              <h6><%= gift.name %></h6>
+              <small><%= gift.description %></small>
+            </div>
+            <p>
+              <a class = "btn btn-success btn-sm" target = "_blank" href = <%=gift.url_prod%>><i class="fas fa-shopping-cart"></i>    <%=number_to_currency(gift.price, unit: "R$", separator: ",", delimiter: "")%></a>
+            </p>
+            <small>
+          </center>
+        </div>
+        <% @i = @i + 1 %>
+        <% break if (@i >= @gifts.length) %> 
+      <% end %>
     </div>
+    
+  </div>
+  
+    
 </div>
 
 
