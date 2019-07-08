@@ -17,4 +17,12 @@ module PessoalHelper
             return "OMG!"
         end
     end
+    
+    def min(i,j)
+        if i < j then
+            return i
+        else
+            return j
+        end
+    end
 end
