@@ -5,29 +5,18 @@
 <%= render 'cabecalho' %>
 
 <div class = "p-secao" id = "sobre">
-    <h3>Sobre mim</h3>
+    <h3>Um pouco da minha história...</h3>
 </div>
 
-<div class = "container my-2 padding-lados">
-    <div class = "row">
-        <div class = "col-md-auto my-2">
-            <center><%= image_tag "/assets/ricarth-personal.png", class: "imagem-foto"%></center>
-        </div>
-        <div class = "col my-2">
-            <h3><strong>Ricarth Ruan da Silva Lima</strong></h3>
-            <ul class="list-group list-group-flush">
-                <li class = "list-group-item"><strong>Sistemas de Informação - CIn (UFPE)</strong> - 5º Período<br/></li>
-                <li class = "list-group-item"><strong>Pernambuco</strong><br/></li>
-                <li class = "list-group-item"><strong>E-mail:</strong> <a href = "mailto:rrsl@cin.ufpe.br">rrsl@cin.ufpe.br</a><br/></li>
-                <% if @sensivel == true %>
-                    <%= render "shared/info_basica_sensivel" %>
-                <% end %>
-            </ul>
-        </div>
-    </div>
+<div class = "mb-sm">
+    <center>
+        <%= image_tag "/assets/ricarth-personal.png", class: "imagem-foto"%>
+        <h3><strong>Ricarth Ruan da Silva Lima</strong></h3>
+    </center>
 </div>
 
 <div class = "p-texto">
+    
     Olá! Sou estudante de <strong>Sistemas de Informação</strong> no Centro de Informática da Universidade Federal de Pernambuco (CIn-UFPE). Desde muito jovem me interesso
     por computadores e coisas que podemos fazer com eles. Fiz "cursos profissionalizantes" na área ainda na minha infância que, apesar de hoje serem conhecimentos ultrapassados,
     serviram como minha inspiração para seguir os caminhos que trilhei.</p>
