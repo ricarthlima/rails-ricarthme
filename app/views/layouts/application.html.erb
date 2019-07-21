@@ -1,22 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Configurações Básicas -->
     <title>Ricarth Lima</title>
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Definição do Favicon -->
+    <%= favicon_link_tag asset_path('ricarth-foto-redonda.png')%>
+    
+    <!-- Importação do FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    
+    <!-- Importação de Fontes -->
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin|Oswald&display=swap" rel="stylesheet"> 
+    
+    <!-- Outras configurações -->
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= favicon_link_tag asset_path('ricarth-foto-redonda.png')%>
   </head>
 
   <body>
     
     <%= yield :nav %>
-    
     <div class = "container bg-branco no-padding">
+      <% if notice %>
+        <p class="alert alert-success">
+          <%= notice %>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger">
+          <%= alert %>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </p>
+      <% end %>
+        
+    
       <%= yield %>
     </div>
     

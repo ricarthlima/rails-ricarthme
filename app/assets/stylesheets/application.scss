@@ -12,17 +12,42 @@
  *
  */
 
+/*Importações*/
 @import 'bootstrap';
 
+/*Definição de Pad~ros*/
 body{
-    //background-color: #f4eafa;
     background-color: #f4f4f4;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: 'Oswald', sans-serif;
+}
+
+/*Atalhos*/
+.mt-sm{
+    margin-top: 5px;
+}
+
+.mb-sm{
+    margin-bottom: 5px;
+}
+
+.mr-sm{
+    margin-right: 5px;
+}
+
+.ml-sm{
+    margin-left: 5px;
 }
 
 .no-padding{
     padding: 0px;
 }
 
+
+/*Outros*/
 .padding-lados{
     padding-left: 3%;
     padding-right: 3%;
@@ -100,7 +125,7 @@ div.justificado{
     text-justify: inter-word;
 }
 
-// Pessoal
+/*Pessoal*/
 
 .nav-p-color{
     background-color: #2d431c;
