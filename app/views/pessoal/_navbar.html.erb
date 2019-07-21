@@ -25,17 +25,42 @@
         <li class="nav-item">
           <a class="nav-link" href=<%=oqfev_path%>>O que fiz enquanto vivi?</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href=<%=wishlist_path%>>Lista de Presentes</a>
+        </li>
       </ul>
       
       <ul class = "navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href=<%=profissional_path%>>Profissional</a>
-        </li>
+
         <li class="nav-item">
             <a class="nav-link" href="https://sites.google.com/cin.ufpe.br/ricarthlima/p%C3%A1gina-inicial">Acadêmico</a>
         </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href=<%=profissional_path%>>Profissional</a>
+        </li>
+        
+        <% if user_signed_in? %>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-cog"></i>
+            </button>
+            <div class="mt-sm dropdown-menu dropdown-menu-right nav-p-color text-light" aria-labelledby="dropdownMenuButton">
+              <% if can? :manage, Gift %><a class="dropdown-item text-light" href=<%=gifts_path%>>Gifts</a><%end%>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item text-light" href=<%=edit_user_registration_path%>>Editar Perfil</a>
+              <a class="dropdown-item text-light" data-method="delete" href=<%=destroy_user_session_path%>>Sair</a>
+            </div>
+          </div>
+        <% else %>
+          <li class="nav-item">
+          <a class="nav-link" href=<%= new_user_session_path%>>Login</a>
+        </li>
+        <% end %>
       </ul>
     </div>
     
   </div>
+  
+  
 </nav>

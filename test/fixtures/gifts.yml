@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  wishlevel: 1
+  price: 1.5
+  description: MyText
+  url_image: MyString
+  url_prod: MyString
+  active: false
+
+two:
+  name: MyString
+  wishlevel: 1
+  price: 1.5
+  description: MyText
+  url_image: MyString
+  url_prod: MyString
+  active: false
