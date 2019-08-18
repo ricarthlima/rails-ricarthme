@@ -4,6 +4,8 @@ class PessoalController < ApplicationController
         @primeiro = false
         @i = 0
         @l = min(5, @gifts.length)
+        
+        @gifts_inactive = Gift.where("active = false").order("wishlevel DESC, name ASC")
     end
     
     private 

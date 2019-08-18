@@ -4,14 +4,16 @@
 
 <h1>Gerenciador de Presentes</h1>
 
-<table class = "table">
-  <thead>
+<%= link_to 'New Gift', new_gift_path, class: "btn btn-success mt-sm" %>
+
+<table class = "table table-responsive table-sm table-striped">
+  <thead class = "thead-dark">
     <tr>
+      <th>Image</th>
       <th>Name</th>
       <th>Wishlevel</th>
       <th>Price</th>
       <th>Description</th>
-      <th>Url image</th>
       <th>Url prod</th>
       <th>Active</th>
       <th colspan="3"></th>
@@ -21,12 +23,12 @@
   <tbody>
     <% @gifts.each do |gift| %>
       <tr>
-        <td><%= gift.name %></td>
+        <td><center><img style = "max-height: 150px; max-width: 150px;" src = <%= gift.url_image %>></center></td>
+        <td><center><strong><%= gift.name %></strong></center></td>
         <td><%= gift.wishlevel %></td>
         <td><%= gift.price %></td>
         <td><%= gift.description %></td>
-        <td><%= gift.url_image %></td>
-        <td><%= gift.url_prod %></td>
+        <td><small><a href = ></a></small><%= gift.url_prod %></td>
         <td><%= gift.active %></td>
         <td><%= link_to 'Show', gift %></td>
         <td><%= link_to 'Edit', edit_gift_path(gift) %></td>
@@ -38,4 +40,3 @@
 
 <br>
 
-<%= link_to 'New Gift', new_gift_path %>
