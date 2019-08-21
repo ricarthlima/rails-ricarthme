@@ -253,10 +253,21 @@ div.justificado{
     position: static;
 }
 
+@media(max-width: 575px){
+    .botao-flutuante{
+        position: fixed;
+    }
+}
+
+@media(min-width: 576px){
+    .botao-flutuante{
+        position: absolute;
+    }
+}
+
 .botao-flutuante{
-    position: fixed;
-    bottom: 4vh;
-    right: 2vw;
+    bottom: 32px;
+    right: 32px;
     
     font-size: 30px;
     color: white;
