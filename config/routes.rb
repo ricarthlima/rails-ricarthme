@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root "pessoal#index"
   
   # Rotas para páginas de pessoal
-  get "oqfev" => "pessoal#vivi"
+  get "oquefiz" => "pessoal#vivi"
   get "livros" => "pessoal#personal_books"
   get "desafios" => "pessoal#desafios"
   get "wishlist" => "pessoal#wishlist"
