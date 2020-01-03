@@ -253,21 +253,9 @@ div.justificado{
     position: static;
 }
 
-@media(max-width: 575px){
-    .botao-flutuante{
-        position: fixed;
-    }
-}
-
-@media(min-width: 576px){
-    .botao-flutuante{
-        position: absolute;
-    }
-}
-
 .botao-flutuante{
-    bottom: 32px;
-    right: 32px;
+    bottom: 16px;
+    right: 16px;
     
     font-size: 30px;
     color: white;
@@ -280,6 +268,8 @@ div.justificado{
     padding-top: 7px;
     height: 60px;
     width: 60px;
+    
+    position: fixed;
 }
 
 .botao-flutuante:hover{
