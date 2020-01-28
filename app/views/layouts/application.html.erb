@@ -2,18 +2,20 @@
 <html>
   <head>
     <!-- Configurações Básicas -->
-    <title><%= yield :title %> Ricarth Lima</title>
+    <title><%= yield :title %></title>
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Definição do Favicon -->
     <%= favicon_link_tag asset_path('ricarth-foto-redonda.png')%>
+    <%= yield :favicon %>
     
     <!-- Importação do FontAwesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     
     <!-- Importação de Fontes -->
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin|Oswald&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap" rel="stylesheet"> 
     
     <!-- Outras configurações -->
     <%= csrf_meta_tags %>
@@ -26,6 +28,13 @@
 
   <body>
     
+    <div class = "bg-black" style = "min-height: 90vh">
+        <div class = "container">
+            <%= yield :fara_pages %>
+        </div>
+    </div>
+    
+
     <%= yield :nav %>
     <div class = "container bg-branco no-padding">
       <% if notice %>
@@ -52,5 +61,9 @@
       <i class="fas fa-envelope"></i>
     </button>
     
+    
+    
   </body>
+  
+
 </html>

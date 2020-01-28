@@ -1,0 +1,2 @@
+class FaraController < ApplicationController
+end

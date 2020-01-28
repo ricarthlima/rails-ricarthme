@@ -15,5 +15,9 @@ Rails.application.routes.draw do
   get "p" => "profissional#index"
   get "profissional/:empresa" => "profissional#index"
   get "p/:empresa" => "profissional#index"
+  
+  # Rotas para FARA
+  get "fara" => "fara#index"
+  get "FARA" => "fara#index"
 
 end
