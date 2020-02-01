@@ -113,7 +113,7 @@ div.titulo-imagem{
     
     color: #FFFFFF;
     
-    background-image: url('ricarth-fundo-roxo.jpg');
+    background-image: url('ricarth-fundo-azul.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 90%;
@@ -334,4 +334,10 @@ div.secao{
 #quote{
     animation-name: fadeIn;
     animation-duration: 2s;
+    color: var(--light_blue);
+}
+
+.secao-icon{
+    height: 50px;
+    width: 50px;
 }
