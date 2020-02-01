@@ -2,17 +2,28 @@
     <h2>O que é o mínimo que você precisa saber?</h2>
 </div>
 
-<div class = "container my-4 padding-lados">
+
+<div class = "container my-4 padding-lados" id = "info_basica">
     <div class = "row">
         <div class = "col-md-auto my-2">
-            <center><%= image_tag "/assets/ricarth-foto-redonda.png", class: "imagem-foto"%></center>
+            <center><%= image_tag "/assets/ricarth.png", class: "imagem-foto"%></center>
         </div>
         <div class = "col my-2">
-            <h3><strong>Ricarth Ruan da Silva Lima</strong></h3>
+            <h3 style = "color: var(--red);"><strong>Ricarth Ruan da Silva Lima</strong></h3>
             <ul class="list-group list-group-flush">
-                <li class = "list-group-item"><strong>Sistemas de Informação - CIn (UFPE)</strong> - 5º Período<br/></li>
-                <li class = "list-group-item"><strong>Pernambuco</strong><br/></li>
+                <li class = "list-group-item"><strong>Sistemas de Informação - CIn (UFPE)</strong> - 7º Período (2020.1)<br/></li>
+                <li class = "list-group-item"><strong>Recife - Pernambuco</strong><br/></li>
                 <li class = "list-group-item"><strong>E-mail:</strong> <a href = "mailto:rrsl@cin.ufpe.br">rrsl@cin.ufpe.br</a><br/></li>
+                <li class = "list-group-item" style = "text-align: justify !important;">
+                Olá! Sou <b>estudante de SI</b>, 
+                <b><a href = "http://github.com/ricarthlima" target = "_blank">programador</a></b>, 
+                aspirante à <b>empreendedor</b>, 
+                <b><a href = "http://instagram.com/rich_art96" target="_blank">artista</a></b>, 
+                <b><a href = "http://bit.ly/laco-py" target="_blank">professor</a></b>,
+                <b><a href = "https://steamcommunity.com/id/ricarthlima" target = "_blank">apaixonado por jogos</a></b> e 
+                talvez o maior fã da Mulher Maravilha que você conheça. Desde muito jovem me interesso por computadores 
+                e coisas que podemos fazer com eles.
+                </li>
                 <% if @sensivel == true %>
                     <%= render "shared/info_basica_sensivel" %>
                 <% end %>

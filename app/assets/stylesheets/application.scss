@@ -12,13 +12,26 @@
  *
  */
 
+ 
+
 /*Importações*/
 @import 'bootstrap';
 @import 'fara.scss';
+@import 'profissional.scss';
+@import 'animate.scss';
+
+:root{
+    --bg_blue: #0f5e7b;
+    --light_blue: #cfffee;
+    --yellow: #fff28e;
+    --red: #ff6257;
+}
+
+
 
 /*Definição de Padrões*/
 body{
-    background-color: #f4f4f4;
+    background-color: var(--light_blue);
     font-family: 'Libre Franklin', sans-serif;
 }
 
@@ -67,8 +80,8 @@ h1, h2, h3, h4, h5{
 }
 
 .nav-color{
-    background-color: #26053F;
-    color: #FFFFFF;
+    background-color: var(--red);
+    color: white;
 }
 
 .nav-shadow{
@@ -109,14 +122,10 @@ div.titulo-imagem{
 img.imagem-foto{
     max-height: 150px;
     border-radius: 50%;
-    border: 5px solid #3B4F36;
+    border: 5px solid var(--red);
 }
 
-div.secao{
-    padding: 3%;
-    background-color: #292929;
-    color: #FFFFFF;
-}
+
 
 div.texto{
     padding: 3%;
@@ -262,7 +271,7 @@ div.justificado{
     color: white;
     text-align: center;
     
-    background: #292929;
+    background: var(--bg_blue);
     border-radius: 50%;
     box-shadow: 1px 2px 2px rgba(0,0,0,0.5);
     
@@ -275,9 +284,54 @@ div.justificado{
 
 .botao-flutuante:hover{
     color: #dddddd;
+    animation-name: swing;
+    animation-duration: 2s;
 }
 
 .image-destaque{
-    border: 3px solid #2D431C;
+    border: 4px solid var(--red);
     border-radius: 75px;
+    margin-bottom: 10px;
+}
+
+.skills-title{
+    background: var(--red);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+
+    padding: 10px;
+    font-size: 0.85em;
+
+    margin-top: 5px;
+}
+
+.skills-images{
+    padding: 5px;
+    margin:auto;
+}
+
+.skills-text{
+    font-size: 0.9em;
+    text-align: justify;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+div.secao{
+    padding: 3%;
+    background: var(--bg_blue);
+    color: var(--light_blue);
+    animation-name: bounceInLeft;
+    animation-duration: 1s;
+}
+
+#info_basica{
+    animation-name: bounceInRight;
+    animation-duration: 1s;
+}
+
+#quote{
+    animation-name: fadeIn;
+    animation-duration: 2s;
 }
