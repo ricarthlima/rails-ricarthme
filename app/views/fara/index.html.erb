@@ -8,45 +8,53 @@
 <% end %>
 
 <%= content_for :fara_pages do %>
-<div class = "bg-black" style = "min-height: 90vh">
+    <div class = "bg-black" style = "min-height: 90vh; color: white; padding-bottom: 45px;">
         <div class = "container">
             <center style = "padding-top: 30px;">
-            <img src = "/assets/fara/icon512.png" class = "img-fluid" heigth = "256" width = "256">
-            </br>    
-            </br>
-            <h1 style = "font-family: 'IBM Plex Mono', monospace;">F(or) A Real Angel</h1>
-            </br>
-            FARA é um jogo de puzzle estilo riddle. Ajude Andrew a recuperar suas memórias enquanto desvenda os obscuros segredos do Projeto K22B.
-            </br>
-            <small style = "color: grey;">FARA é um jogo em desenvolvimento, novos episódios serão lançados periodicamente.</small>        
-        </center>
-
-        <center>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/fUjABg_gSLY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </center>
-
-        <table class = "table">
-            <tbody>
-            <tr>
-                    <td><img src = "/assets/fara/icon_demo.png" class = "img-fluid" heigth = "64" width = "64"></td>
-                    <td><img src = "/assets/fara/icon512.png" class = "img-fluid" heigth = "64" width = "64"></td>
-            </tr> 
-
-                <tr>
-                    <td>Experimente FARA de graça!</td>
-                    <td>Aprecie toda a experiência de FARA na versão completa por R$7,90.</td>
-            </tr>
-
-            <tr>
-                    <td></td>
-                    <td>
-                        <a href='https://play.google.com/store/apps/details?id=com.ricarthlima.for_a_real_angel&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target = "_blank">
-                            <img class = "img-fluid img-playstore" alt='Disponível no Google Play' src='https://play.google.com/intl/en_gb/badges/static/images/badges/pt-br_badge_web_generic.png'/>
-                        </a>
-                    </td>
-            </tr>
-            </tbody>
-        </table>        
+                <center>
+                    <iframe class = "fara-video" src="https://www.youtube.com/embed/fUjABg_gSLY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </center>
+                <h1 style = "font-family: 'IBM Plex Mono', monospace;">F(or) A Real Angel</h1>
+                </br>
+                FARA é um jogo de puzzle estilo riddle. Ajude Andrew a recuperar suas memórias enquanto desvenda os obscuros segredos do Projeto K22B.
+                </br>
+                <small style = "color: grey;">FARA é um jogo em desenvolvimento, novos episódios serão lançados periodicamente.</small>        
+            </center>
+        
+            <div class = "row align-items-center">
+            
+                <div class = "col-12 col-sm-6 align-self-center">
+                    <div class = "fara-section">
+                        <center>
+                            <img src = "/assets/fara/icon_demo.png" class = "img-fluid" heigth = "128" width = "128">
+                            </br></br>
+                            <b class = "fara-font" style = "font-size: 1em;">
+                                Experimente FARA de graça!
+                            </b>
+                            </br>
+                            <a href='https://play.google.com/store/apps/details?id=com.ricarthlima.for_a_real_angel_demo' target = "_blank">
+                                <img class = "img-fluid img-playstore" alt='Disponível no Google Play' src='https://play.google.com/intl/en_gb/badges/static/images/badges/pt-br_badge_web_generic.png'/>
+                            </a>
+                        </center>
+                    </div>
+                </div>
+            
+                <div class = "col-12 col-sm-6">
+                    <div class = "fara-section">
+                        <center>
+                            <img src = "/assets/fara/icon512.png" class = "img-fluid" heigth = "128" width = "128">
+                            </br></br>
+                            <b class = "fara-font" style = "font-size: 1em;">
+                                Sem anúncios e episódios novos semanalmente!
+                            </b>
+                            </br>
+                            <a href='https://play.google.com/store/apps/details?id=com.ricarthlima.for_a_real_angel&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target = "_blank">
+                                <img class = "img-fluid img-playstore" alt='Disponível no Google Play' src='https://play.google.com/intl/en_gb/badges/static/images/badges/pt-br_badge_web_generic.png'/>
+                            </a>
+                        </center>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>    
 <% end %>

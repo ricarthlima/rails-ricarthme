@@ -350,6 +350,22 @@ div.secao{
 }
 
 .img-playstore{
-    width: 256px;
+    width: 300px;
     height: auto;
+}
+
+.fara-section{
+    margin-top: 25px;
+    border-top: white solid 5px;
+    padding-top: 25px;
+}
+
+.fara-font{
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.fara-video{
+    max-width: 85vw;
+    width: 400px;
+    height: 400px;
 }

@@ -19,5 +19,6 @@ Rails.application.routes.draw do
   # Rotas para FARA
   get "fara" => "fara#index"
   get "FARA" => "fara#index"
+  get "playfara" => "fara#index"
 
 end
