@@ -21,4 +21,5 @@ Rails.application.routes.draw do
   get "FARA" => "fara#index"
   get "playfara" => "fara#index"
 
+  get "fara/desafios" => "fara#desafios"
 end

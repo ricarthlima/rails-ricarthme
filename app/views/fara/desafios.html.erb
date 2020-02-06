@@ -1,0 +1,85 @@
+<%= content_for :title do %>
+    F(or) A Real Angel
+<% end %>
+
+<%= content_for :fara_pages do %>
+    <div class = "bg-black" style = "min-height: 90vh; color: white; padding-bottom: 45px;">
+        <div class = "container">
+            <center style = "padding-top: 30px;">
+                <center>
+                    <iframe class = "fara-video-small" src="https://www.youtube.com/embed/fUjABg_gSLY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </center>
+                <h1 style = "color: red;" class = "fara-font">Então você gosta de desafios?</h1>
+                <b class = "fara-font" style = "font-size: 1.5em;">
+                    Experimente FARA de graça!
+                </b>
+                <a href='https://play.google.com/store/apps/details?id=com.ricarthlima.for_a_real_angel_demo' target = "_blank">
+                    <img class = "img-fluid img-playstore" alt='Disponível no Google Play' src='https://play.google.com/intl/en_gb/badges/static/images/badges/pt-br_badge_web_generic.png'/>
+                </a>
+                </br>
+
+                <div class = "fara-section">
+                    Insira sua resposta abaixo:
+                
+                    <div class = "row ">
+                        <div class = "col">
+                            <input id = "inputeiro" class = "form-control mr-sm">
+                        </div>
+                        <div class = "col-auto">
+                            <button id = "buteiro" class = "btn btn-danger">Enviar</button>
+                        </div>
+                    </div>
+                    </br>
+                    <div style = "padding: 10px; background: #4a4a4a;">
+                        <b id = "responseiro"></b>
+                    </div>
+
+                </div>
+            </center>
+        </div>
+    </div>
+
+<script>
+    // Opa, então você gosta de ver código-fonte?
+    // Boa! Você vai curtir FARA, nem baixa o DEMO, compra logo!
+
+    var inputeiro = document.getElementById("inputeiro");
+    var buteiro = document.getElementById("buteiro");
+    var responseiro = document.getElementById("responseiro");
+
+    inputeiro.addEventListener("keyup", function(event) {
+        // Number 13 is the "Enter" key on the keyboard
+        if (event.keyCode === 13) {
+            buteiro.click();
+        }
+    });
+
+    buteiro.addEventListener("click", function() {
+        var resp = inputeiro.value.toLowerCase();
+        if (resp == "k22b"){
+            responseiro.innerHTML = "DESAFIO 02 - Resposta correta! Dmitri ajudou?"
+        }else if (resp == "jardineiro") {
+            responseiro.innerHTML = "DESAFIO 01 - Resposta correta! Não faz sentido o jardineiro agoar as plantas em um dia chuvoso."
+        }else if (resp == "22") {
+            responseiro.innerHTML = "DESAFIO 03 - Resposta correta! F = 22, A = 11, R = 33."
+        }else if (resp == "10") {
+            responseiro.innerHTML = "DESAFIO 04 - Resposta correta! São 10 triangulos."
+        }else if ((resp == "relógio") || (resp == "relogio")) {
+            responseiro.innerHTML = "DESAFIO 05 - Resposta correta!"
+        }else if (resp == "32") {
+            responseiro.innerHTML = "DESAFIO 06 - Resposta correta! "
+        }else if (resp == "tardígrado") {
+            responseiro.innerHTML = "DESAFIO 07 - Resposta correta! "
+        }else if (resp == "andrew") {
+            responseiro.innerHTML = "DESAFIO 08 - Resposta correta! "
+        }else if (resp == "KB") {
+            responseiro.innerHTML = "DESAFIO 09 - Resposta correta! "
+        }else if (resp == "vigenere") {
+            responseiro.innerHTML = "DESAFIO 10 - Resposta correta! Você está pronto! Jogue FARA!"
+        }else{
+            responseiro.innerHTML = "Resposta incorreta!"
+        }
+        
+    })
+</script>
+<% end %>
